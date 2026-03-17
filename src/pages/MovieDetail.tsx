@@ -133,8 +133,8 @@
               )}
 
 
-                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center" sx={{ mt: 4 }} >
-                <Button variant="outlined" onClick={handleBack} size="large" >
+                <Stack direction="row"  flexWrap="wrap" spacing={2}  justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
+                <Button variant="outlined" onClick={handleBack} size="large"    sx={{ minWidth: { xs: 'auto', sm: 200 }, height: '50px'}} >
                   Назад
                 </Button>
                 <Button
@@ -143,6 +143,7 @@
                   onClick={handleToggleFavorite}
                   startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                   size="large"
+                  sx={{ minWidth: { xs: 'auto', sm: 200 }, height: '50px'}}
                 >
                   {isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
                 </Button>
@@ -154,7 +155,7 @@
                     target="_blank" 
                     rel="noopener noreferrer"
                     size="large"
-                    sx={{ color: '#008cff' }}
+                    sx={{color: '#008cff' }} 
                   >
                     На Кинопоиск
                   </Button>
