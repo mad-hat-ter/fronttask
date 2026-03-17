@@ -133,33 +133,30 @@
               )}
 
 
-                <Stack direction="row" spacing={2}  justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
-                <Button variant="outlined" onClick={handleBack} size="large"    sx={{ minWidth: { xs: 'auto', sm: 200 }, height: '50px'}} >
-                  Назад
-                </Button>
-                <Button
-                  variant="contained"
-                  color={isFavorite ? 'error' : 'primary'}
-                  onClick={handleToggleFavorite}
-                  startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
-                  size="large"
-                  sx={{ minWidth: { xs: 'auto', sm: 200 }, height: '50px'}}
-                >
-                  {isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
-                </Button>
-                {movie.webUrl && (
-                  <Button
-                    variant="text"
-                    component={Link} 
-                    href={movie.webUrl} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    size="large"
-                    sx={{color: '#008cff' }} 
-                  >
-                    На Кинопоиск
-                  </Button>
-                )}
+            <Stack direction="row" spacing={2}  sx={{ mt: 4, display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+            <Button variant="outlined" onClick={handleBack}>
+              Назад
+            </Button>
+            <Button
+              variant="contained"
+              color={isFavorite ? 'error' : 'primary'}
+              onClick={handleToggleFavorite}
+              startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+            >
+              {isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
+            </Button>
+            {movie.webUrl && (
+              <Button
+                variant="text"
+                component={Link} 
+                href={movie.webUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                sx={{ textDecoration: 'none' }}
+              >
+                На Кинопоиск
+              </Button>
+            )}
               </Stack>
             </Grid>
           </Grid>
