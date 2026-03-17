@@ -133,7 +133,7 @@
               )}
 
 
-            <Stack direction="row" spacing={2}  sx={{ mt: 4, display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+            <Stack direction="row" spacing={2}  sx={{ mt: 4, alignItems: 'stretch' }}>
             <Button variant="outlined" onClick={handleBack}>
               Назад
             </Button>
