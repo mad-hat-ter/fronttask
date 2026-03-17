@@ -25,9 +25,9 @@
               У вас пока нет избранных фильмов. Найдите их через <Button onClick={() => navigate('/search')}>Поиск</Button>!
             </Typography>
           ) : (
-            <Grid container spacing={3}>
+            <Grid container spacing={3} justifyContent="center">
               {favorites.map((movie) => (
-                <Grid key={movie.kinopoiskId} size={{ xs: 12, sm: 6, md: 3 }}>
+                <Grid key={movie.kinopoiskId} size={{ xs: 12, sm: 6, md: 3 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                   <MovieCard movie={movie} onClick={handleMovieClick} />
                 </Grid>
               ))}
