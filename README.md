@@ -1,73 +1,33 @@
-# React + TypeScript + Vite
+# Приложение по сервису "Кинопоиск"
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Приложение для работы с базой данных серива Кинопоиск
 
-Currently, two official plugins are available:
+## Ссылка
+https://mad-hat-ter.github.io/fronttask/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Функционал
 
-## React Compiler
+1.  **Главная:** Описание проекта
+2.  **Поиск:** Позволяет искать фильмы по названию с использованием API
+3.  **Страница фильма:** Отображает подробную информацию о выбранном фильме (постер, описание, рейтинг, жанры, страны)
+    •   Кнопка "Назад" для возврата на предыдущую страницу
+    •   Кнопки "Добавить в избранное" / "Удалить из избранного"
+    •   Ссылка на оригинальную страницу фильма на Кинопоиск
+4.  **Избранное:** Список всех фильмов, добавленных пользователем в избранное в `localStorage`
+5.  **Список фильмов:** Показывает список популярных фильмов
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Технологии
 
-## Expanding the ESLint configuration
+•   React, React Router
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+•   Redux Toolkit
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+•   Material UI
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+•   Kinopoisk API
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+•   Prettier
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+•   Storybook
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+•   GitHub
