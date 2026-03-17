@@ -66,12 +66,12 @@
             </Typography>
           )}
 
-        <Grid container spacing={3}>
+        <Grid container spacing={3} justifyContent="center">
           {movies.map((movie) => {
             const movieId = movie.kinopoiskId || movie.filmId; 
     
            return (
-             <Grid key={movieId} size={{ xs: 12, sm: 6, md: 3 }}>
+             <Grid key={movieId} size={{ xs: 12, sm: 6, md: 3 }} sx={{ display: 'flex', justifyContent: 'center' }}>
                <MovieCard 
                   movie={movie} 
                  onClick={() => movieId && handleMovieClick(movieId)} 

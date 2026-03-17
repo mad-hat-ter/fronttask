@@ -134,7 +134,7 @@
 
 
               <Box sx={{ mt: 4, display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
-                <Button variant="outlined" onClick={handleBack} startIcon={<></>} size="large">
+                <Button variant="outlined" onClick={handleBack} size="large" sx={{ mr: 1 }} >
                   Назад
                 </Button>
                 <Button

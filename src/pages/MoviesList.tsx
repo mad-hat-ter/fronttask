@@ -42,9 +42,9 @@ const MoviesList: React.FC = () => {
       {loading && <CircularProgress sx={{ display: 'block', margin: '40px auto' }} />}
       {error && <Alert severity="error">{error}</Alert>}
 
-      <Grid container spacing={3}>
+      <Grid container spacing={3} justifyContent="center">
         {movies.map((movie) => (
-          <Grid key={movie.kinopoiskId} size={{ xs: 12, sm: 6, md: 3 }}>
+          <Grid key={movie.kinopoiskId} size={{ xs: 12, sm: 6, md: 3 }} sx={{ display: 'flex', justifyContent: 'center' }}>
             <MovieCard movie={movie} onClick={handleMovieClick} />
           </Grid>
         ))}
