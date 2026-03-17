@@ -134,7 +134,7 @@
 
 
                 <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center" sx={{ mt: 4 }} >
-                <Button variant="outlined" onClick={handleBack} size="large" sx={{ mr: 1 }} >
+                <Button variant="outlined" onClick={handleBack} size="large" >
                   Назад
                 </Button>
                 <Button
@@ -143,7 +143,6 @@
                   onClick={handleToggleFavorite}
                   startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
                   size="large"
-                  sx={{ ml: 1 }}
                 >
                   {isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
                 </Button>
@@ -155,7 +154,7 @@
                     target="_blank" 
                     rel="noopener noreferrer"
                     size="large"
-                    sx={{ ml: 1, color: '#008cff' }}
+                    sx={{ color: '#008cff' }}
                   >
                     На Кинопоиск
                   </Button>
