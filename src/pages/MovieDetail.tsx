@@ -133,9 +133,8 @@
               )}
 
 
-              {/* Кнопки */}
-              <Box sx={{ display: 'flex', gap: 2, mt: 4 }}>
-                <Button variant="outlined" onClick={handleBack} startIcon={<></> /* Заглушка, если нет иконки */}>
+              <Box sx={{ mt: 4, display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                <Button variant="outlined" onClick={handleBack} startIcon={<></>} size="large">
                   Назад
                 </Button>
                 <Button
@@ -143,6 +142,8 @@
                   color={isFavorite ? 'error' : 'primary'}
                   onClick={handleToggleFavorite}
                   startIcon={isFavorite ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+                  size="large"
+                  sx={{ ml: 1 }}
                 >
                   {isFavorite ? 'Удалить из избранного' : 'Добавить в избранное'}
                 </Button>
@@ -153,7 +154,8 @@
                     href={movie.webUrl} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    sx={{ textDecoration: 'none' }}
+                    size="large"
+                    sx={{ ml: 1, color: '#008cff' }}
                   >
                     На Кинопоиск
                   </Button>
