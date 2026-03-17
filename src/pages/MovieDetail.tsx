@@ -2,7 +2,7 @@
     import React, { useState, useEffect } from 'react';
     import { useParams, useNavigate } from 'react-router-dom';
     import {
-      Box, Typography, Rating, Container, Button, CircularProgress, Grid, Link, Alert,
+      Box, Typography, Rating, Container, Button, CircularProgress, Grid, Link, Alert, Stack,
       Chip 
     } from '@mui/material';
     import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
@@ -133,7 +133,7 @@
               )}
 
 
-              <Box sx={{ mt: 4, display: 'flex', flexDirection: 'row', gap: 1, alignItems: 'center' }}>
+                <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2} alignItems="center" sx={{ mt: 4 }} >
                 <Button variant="outlined" onClick={handleBack} size="large" sx={{ mr: 1 }} >
                   Назад
                 </Button>
@@ -160,7 +160,7 @@
                     На Кинопоиск
                   </Button>
                 )}
-              </Box>
+              </Stack>
             </Grid>
           </Grid>
         </Container>
