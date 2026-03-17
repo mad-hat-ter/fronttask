@@ -133,7 +133,7 @@
               )}
 
 
-                <Stack direction="row"  flexWrap="wrap" spacing={2}  justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
+                <Stack direction="row" spacing={2}  justifyContent="center" alignItems="center" sx={{ mt: 4 }}>
                 <Button variant="outlined" onClick={handleBack} size="large"    sx={{ minWidth: { xs: 'auto', sm: 200 }, height: '50px'}} >
                   Назад
                 </Button>
