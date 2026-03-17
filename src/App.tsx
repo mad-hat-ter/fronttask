@@ -28,7 +28,7 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline /> 
-      <BrowserRouter basename="/frontproject/"> 
+      <BrowserRouter basename="/fronttask/"> 
         <Header /> 
         <Container maxWidth="xl" sx={{ mt: 2, mb: 4 }}>
           <Routes>
